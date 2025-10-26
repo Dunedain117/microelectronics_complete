@@ -1,0 +1,7 @@
+/mnt/c/Users/Andrea/Desktop/simulazioni/microel_gammas/build/CMakeFiles/microelectronics.dir
+/mnt/c/Users/Andrea/Desktop/simulazioni/microel_gammas/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Andrea/Desktop/simulazioni/microel_gammas/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Andrea/Desktop/simulazioni/microel_gammas/build/CMakeFiles/list_install_components.dir
+/mnt/c/Users/Andrea/Desktop/simulazioni/microel_gammas/build/CMakeFiles/install.dir
+/mnt/c/Users/Andrea/Desktop/simulazioni/microel_gammas/build/CMakeFiles/install/local.dir
+/mnt/c/Users/Andrea/Desktop/simulazioni/microel_gammas/build/CMakeFiles/install/strip.dir

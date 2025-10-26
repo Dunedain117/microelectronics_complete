@@ -1,0 +1,10 @@
+/control/execute vis.mac
+/tracking/verbose 0
+/vis/modeling/trajectories/create/drawByParticleID
+/gun/energy 511 keV
+/gun/particle gamma
+
+/run/beamOn 1000000
+
+
+
