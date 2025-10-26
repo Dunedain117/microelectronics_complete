@@ -63,55 +63,55 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
  G4double x,y,z,xp,yp,zp;
  G4AnalysisManager* analysisManager = G4AnalysisManager::Instance();
 
- G4int eventID = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
- if (eventID != fCurrentEventID){
-    analysisManager->FillNtupleDColumn(5, fEdepTotal);
 
+ //if (step->GetTrack()->GetDynamicParticle()->GetDefinition() ->GetParticleName() == "e-")      	  flagParticle = 1;    
+ //if (step->GetTrack()->GetDynamicParticle()->GetDefinition() ->GetParticleName() == "proton")  	  flagParticle = 2;
+ //if (step->GetTrack()->GetDynamicParticle()->GetDefinition() ->GetParticleName() == "GenericIon")    flagParticle = 3;
+
+ //if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="msc")				flagProcess =10;
+ //if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="e-_G4MicroElecElastic")		flagProcess =11;
+ //if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="e-_G4MicroElecInelastic")	flagProcess =12;
+ //if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="eCapture")			flagProcess =13;
+
+ //if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="p_G4MicroElecInelastic")	flagProcess =14;
+
+// if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="ion_G4MicroElecInelastic")	flagProcess =15;
+
+ //if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="hIoni")				flagProcess =16;
+ //if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="eIoni")				flagProcess =17;
+
+ if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()!="Transportation")
+ {  
+   //x=step->GetPreStepPoint()->GetPosition().x()/nanometer;
+   //y=step->GetPreStepPoint()->GetPosition().y()/nanometer;
+   //z=step->GetPreStepPoint()->GetPosition().z()/nanometer;
+   //xp=step->GetPostStepPoint()->GetPosition().x()/nanometer;
+   //yp=step->GetPostStepPoint()->GetPosition().y()/nanometer;
+   //zp=step->GetPostStepPoint()->GetPosition().z()/nanometer;
+   
+   // get analysis manager
+   
+  G4int eventID = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
+  if (eventID != fCurrentEventID){
+    analysisManager->FillNtupleDColumn(0, fEdepTotal);
+    analysisManager->AddNtupleRow();
     fCurrentEventID = eventID;
     fEdepTotal = 0.;
- }
+  }
 
  G4double edep = step->GetTotalEnergyDeposit()/MeV;
   if (edep > 0.){
     fEdepTotal += edep;
   }
- if (step->GetTrack()->GetDynamicParticle()->GetDefinition() ->GetParticleName() == "e-")      	  flagParticle = 1;    
- if (step->GetTrack()->GetDynamicParticle()->GetDefinition() ->GetParticleName() == "proton")  	  flagParticle = 2;
- if (step->GetTrack()->GetDynamicParticle()->GetDefinition() ->GetParticleName() == "GenericIon")    flagParticle = 3;
-
- if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="msc")				flagProcess =10;
- if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="e-_G4MicroElecElastic")		flagProcess =11;
- if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="e-_G4MicroElecInelastic")	flagProcess =12;
- if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="eCapture")			flagProcess =13;
-
- if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="p_G4MicroElecInelastic")	flagProcess =14;
-
- if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="ion_G4MicroElecInelastic")	flagProcess =15;
-
- if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="hIoni")				flagProcess =16;
- if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()=="eIoni")				flagProcess =17;
-
- if (step->GetPostStepPoint()->GetProcessDefinedStep()->GetProcessName()!="Transportation")
- {  
-   x=step->GetPreStepPoint()->GetPosition().x()/nanometer;
-   y=step->GetPreStepPoint()->GetPosition().y()/nanometer;
-   z=step->GetPreStepPoint()->GetPosition().z()/nanometer;
-   xp=step->GetPostStepPoint()->GetPosition().x()/nanometer;
-   yp=step->GetPostStepPoint()->GetPosition().y()/nanometer;
-   zp=step->GetPostStepPoint()->GetPosition().z()/nanometer;
-   
-   // get analysis manager
-   
-
    // fill ntuple
-   analysisManager->FillNtupleDColumn(0, flagParticle);
-   analysisManager->FillNtupleDColumn(1, flagProcess);
-   analysisManager->FillNtupleDColumn(2, x);
-   analysisManager->FillNtupleDColumn(3, y);
-   analysisManager->FillNtupleDColumn(4, z);
+   //analysisManager->FillNtupleDColumn(0, flagParticle);
+   //analysisManager->FillNtupleDColumn(1, flagProcess);
+   //analysisManager->FillNtupleDColumn(2, x);
+   //analysisManager->FillNtupleDColumn(3, y);
+   //analysisManager->FillNtupleDColumn(4, z);
    
-   analysisManager->FillNtupleDColumn(6, std::sqrt((x-xp)*(x-xp)+(y-yp)*(y-yp)+(z-zp)*(z-zp))/nm);
-   analysisManager->FillNtupleDColumn(7, (step->GetPreStepPoint()->GetKineticEnergy() - step->GetPostStepPoint()->GetKineticEnergy())/eV );
-   analysisManager->AddNtupleRow();
+   //analysisManager->FillNtupleDColumn(6, std::sqrt((x-xp)*(x-xp)+(y-yp)*(y-yp)+(z-zp)*(z-zp))/nm);
+   //analysisManager->FillNtupleDColumn(7, (step->GetPreStepPoint()->GetKineticEnergy() - step->GetPostStepPoint()->GetKineticEnergy())/eV );
+   
  }
 }    

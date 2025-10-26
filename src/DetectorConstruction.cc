@@ -122,7 +122,7 @@ G4VPhysicalVolume* DetectorConstruction::ConstructDetector()
   auto* worldMat = new G4Material("g4_Vacuum",1.e-25*g/cm3,1,kStateGas,293.*kelvin,1.e-25*pascal);
   worldMat->AddElement(H,1.0);
 
-  G4double TargetSizeX =  300*um; 
+  G4double TargetSizeX =  3*um; 
   G4double TargetSizeY =  TargetSizeX; 
   G4double TargetSizeZ =  TargetSizeX; 
   fBoxSize = TargetSizeX;
