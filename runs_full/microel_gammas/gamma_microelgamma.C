@@ -1,0 +1,122 @@
+#ifdef __CLING__
+#pragma cling optimize(0)
+#endif
+void gamma_microelgamma()
+{
+//=========Macro generated from canvas: Canvas_1/Canvas_1
+//=========  (Mon Oct 27 09:34:01 2025) by ROOT version 6.36.04
+   TCanvas *Canvas_1 = new TCanvas("gamma microelectronics gamma", "gamma microelectronics gamma", 264, 78, 1646, 822);
+   gStyle->SetOptFit(0);
+   gStyle->SetOptStat(1111);
+   gStyle->SetOptTitle(1);
+   TColor::SetPalette(57, nullptr);
+   Canvas_1->Range(-0.002881875,-11.41875,0.02593688,102.7688);
+   Canvas_1->SetFillColor(0);
+   Canvas_1->SetBorderMode(0);
+   Canvas_1->SetBorderSize(2);
+   Canvas_1->SetFrameBorderMode(0);
+   Canvas_1->SetFrameBorderMode(0);
+   
+   TH1F *htemp__1 = new TH1F("gamma microelectronics gamma", "Energy Deposit 3um Si target", 100, 0, 0.0435);
+   htemp__1->SetBinContent(1,87);
+   htemp__1->SetBinContent(2,69);
+   htemp__1->SetBinContent(3,75);
+   htemp__1->SetBinContent(4,51);
+   htemp__1->SetBinContent(5,67);
+   htemp__1->SetBinContent(6,37);
+   htemp__1->SetBinContent(7,36);
+   htemp__1->SetBinContent(8,28);
+   htemp__1->SetBinContent(9,23);
+   htemp__1->SetBinContent(10,17);
+   htemp__1->SetBinContent(11,11);
+   htemp__1->SetBinContent(12,14);
+   htemp__1->SetBinContent(13,11);
+   htemp__1->SetBinContent(14,15);
+   htemp__1->SetBinContent(15,2);
+   htemp__1->SetBinContent(16,7);
+   htemp__1->SetBinContent(17,6);
+   htemp__1->SetBinContent(18,2);
+   htemp__1->SetBinContent(19,4);
+   htemp__1->SetBinContent(20,2);
+   htemp__1->SetBinContent(21,6);
+   htemp__1->SetBinContent(22,2);
+   htemp__1->SetBinContent(23,1);
+   htemp__1->SetBinContent(24,2);
+   htemp__1->SetBinContent(25,1);
+   htemp__1->SetBinContent(26,1);
+   htemp__1->SetBinContent(27,2);
+   htemp__1->SetBinContent(28,1);
+   htemp__1->SetBinContent(29,2);
+   htemp__1->SetBinContent(31,4);
+   htemp__1->SetBinContent(32,3);
+   htemp__1->SetBinContent(33,3);
+   htemp__1->SetBinContent(34,1);
+   htemp__1->SetBinContent(35,2);
+   htemp__1->SetBinContent(37,1);
+   htemp__1->SetBinContent(39,1);
+   htemp__1->SetBinContent(40,1);
+   htemp__1->SetBinContent(42,1);
+   htemp__1->SetBinContent(43,1);
+   htemp__1->SetBinContent(44,3);
+   htemp__1->SetBinContent(47,2);
+   htemp__1->SetBinContent(48,2);
+   htemp__1->SetBinContent(49,2);
+   htemp__1->SetBinContent(50,2);
+   htemp__1->SetBinContent(51,1);
+   htemp__1->SetBinContent(52,1);
+   htemp__1->SetBinContent(54,1);
+   htemp__1->SetBinContent(55,2);
+   htemp__1->SetBinContent(57,2);
+   htemp__1->SetBinContent(60,2);
+   htemp__1->SetBinContent(64,2);
+   htemp__1->SetBinContent(65,2);
+   htemp__1->SetBinContent(66,1);
+   htemp__1->SetBinContent(71,3);
+   htemp__1->SetBinContent(73,1);
+   htemp__1->SetBinContent(74,1);
+   htemp__1->SetBinContent(81,2);
+   htemp__1->SetBinContent(85,1);
+   htemp__1->SetBinContent(92,1);
+   htemp__1->SetEntries(634);
+   htemp__1->SetDirectory(nullptr);
+   htemp__1->GetXaxis()->SetTitle("Energy deposit (MeV)");
+   htemp__1->GetYaxis()->SetTitle("Counts normalized");
+   
+   TPaveStats *ptstats = new TPaveStats(0.78, 0.775, 0.98, 0.935, "brNDC");
+   ptstats->SetName("stats");
+   ptstats->SetBorderSize(1);
+   ptstats->SetFillColor(0);
+   ptstats->SetTextAlign(12);
+   ptstats->SetTextFont(42);
+   TText *ptstats_text0 = ptstats->AddText("Microelectronics");
+   ptstats_text0->SetTextSize(0.03680000081658363);
+   TText *ptstats_text1 = ptstats->AddText("Entries = 634    ");
+   TText *ptstats_text2 = ptstats->AddText("Mean  = 0.003175");
+   TText *ptstats_text3 = ptstats->AddText("Std Dev   = 0.004009");
+   ptstats->SetOptStat(1111);
+   ptstats->SetOptFit(0);
+   ptstats->SetParent(htemp__1);
+   htemp__1->GetListOfFunctions()->Add(ptstats);
+   htemp__1->SetFillStyle(101);
+   htemp__1->GetXaxis()->SetRange(1, 53);
+   htemp__1->GetXaxis()->SetLabelFont(42);
+   htemp__1->GetXaxis()->SetTitleOffset(1);
+   htemp__1->GetXaxis()->SetTitleFont(42);
+   htemp__1->GetYaxis()->SetLabelFont(42);
+   htemp__1->GetYaxis()->SetTitleFont(42);
+   htemp__1->GetZaxis()->SetLabelFont(42);
+   htemp__1->GetZaxis()->SetTitleOffset(1);
+   htemp__1->GetZaxis()->SetTitleFont(42);
+   htemp__1->DrawNormalized();
+   
+   TPaveText *pt = new TPaveText(0.352873, 0.935187, 0.647127, 0.995, "blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(0);
+   pt->SetFillColor(0);
+   pt->SetFillStyle(0);
+   pt->SetTextFont(42);
+   TText *pt_text4 = pt->AddText("totalEnergyDeposit");
+   pt->Draw("blNDC");
+   Canvas_1->Modified();
+   Canvas_1->SetSelected(Canvas_1);
+}
