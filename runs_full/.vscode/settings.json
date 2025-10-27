@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "histoEle.C": "cpp",
-        "histoCFR.C": "cpp",
-        "histoGamma.C": "cpp"
-    }
-}
