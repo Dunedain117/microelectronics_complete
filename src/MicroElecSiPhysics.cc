@@ -63,6 +63,7 @@
 #include "G4PhotoElectricEffect.hh"
 #include "G4ComptonScattering.hh"
 #include "G4GammaConversion.hh"
+#include "G4LivermoreRayleighModel.hh"
 
 #include "ElectronCapture.hh"
 
@@ -261,12 +262,14 @@ void MicroElecSiPhysics::ConstructEM()
   // ---> STANDARD EM processes are inactivated below 100 MeV
   
   G4UrbanMscModel* msc =  new G4UrbanMscModel();
-
+  msc->SetActivationLowEnergyLimit(100*MeV);
   em_config->SetExtraEmModel("e-","msc",msc,"Target");
   
   mod = new G4MollerBhabhaModel();
+  mod->SetActivationLowEnergyLimit(100*MeV);
 
   em_config->SetExtraEmModel("e-","eIoni",mod,"Target",0.0,10*TeV, new G4UniversalFluctuation());
+
 
   // ---> MicroElec processes activated
 
@@ -332,6 +335,9 @@ void MicroElecSiPhysics::ConstructEM()
 
   mod = new G4LivermoreGammaConversionModel();
   em_config->SetExtraEmModel("gamma","conv",mod,"Target",0.0,10*GeV);
+
+  mod = new G4LivermoreRayleighModel();
+  em_config->SetExtraEmModel("gamma", "Rayleigh",mod,"Target",0,10*GeV);
 
   // Deexcitation
   //
