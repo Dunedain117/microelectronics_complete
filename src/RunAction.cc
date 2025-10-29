@@ -229,14 +229,8 @@ void RunAction::CreateHistogram()
 	// Creating ntuple
 
 	analysisManager->CreateNtuple("microelectronics", "physics");
-	analysisManager->CreateNtupleDColumn("flagParticle");
-	analysisManager->CreateNtupleDColumn("flagProcess");
-	analysisManager->CreateNtupleDColumn("x");
-	analysisManager->CreateNtupleDColumn("y");
-	analysisManager->CreateNtupleDColumn("z");
 	analysisManager->CreateNtupleDColumn("totalEnergyDeposit");
-	analysisManager->CreateNtupleDColumn("stepLength");
-	analysisManager->CreateNtupleDColumn("kineticEnergyDifference");
+
 	analysisManager->FinishNtuple();
 
   analysisManager->CreateH1("Eabs","Edep in absorber", 100, 0., 10*CLHEP::keV);

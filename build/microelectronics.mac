@@ -1,11 +1,10 @@
-/control/execute vis.mac
+#/control/execute vis.mac
 /tracking/verbose 0
 
 
 /gun/energy 200 keV
 /gun/particle e-
 
-/run/beamOn 1000
-
+/run/beamOn 10000000
 
 
