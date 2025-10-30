@@ -1,0 +1,25 @@
+/control/execute vis.mac
+/tracking/verbose 0
+/vis/modeling/trajectories/create/drawByParticleID
+/run/initialize
+/control/execute score.mac
+
+/gun/energy 200 keV
+/gun/particle e-
+
+/run/beamOn 1000
+
+/score/dumpQuantityToFile boxMesh_0 sboxMesh_0 ./scores/ScoreOut0.txt 
+/score/dumpQuantityToFile boxMesh_1 sboxMesh_1 ./scores/ScoreOut1.txt 
+/score/dumpQuantityToFile boxMesh_2 sboxMesh_2 ./scores/ScoreOut2.txt 
+/score/dumpQuantityToFile boxMesh_3 sboxMesh_3 ./scores/ScoreOut3.txt 
+/score/dumpQuantityToFile boxMesh_4 sboxMesh_4 ./scores/ScoreOut4.txt 
+/score/dumpQuantityToFile boxMesh_5 sboxMesh_5 ./scores/ScoreOut5.txt 
+/score/dumpQuantityToFile boxMesh_6 sboxMesh_6 ./scores/ScoreOut6.txt 
+/score/dumpQuantityToFile boxMesh_7 sboxMesh_7 ./scores/ScoreOut7.txt
+/score/dumpQuantityToFile boxMesh_8 sboxMesh_8 ./scores/ScoreOut8.txt 
+
+
+
+
+

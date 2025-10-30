@@ -1,0 +1,74 @@
+/score/create/boxMesh boxMesh_0
+/score/mesh/boxSize 1.5 1.5 1.5 um
+/score/mesh/nBin 1 1 1
+/score/mesh/translate/xyz 0. -3. 3. um
+/score/quantity/nOfTrack sboxMesh_0
+/score/close
+
+/score/create/boxMesh boxMesh_1
+/score/mesh/boxSize 1.5 1.5 1.5 um
+/score/mesh/nBin 1 1 1
+/score/mesh/translate/xyz 0. 0. 3. um
+/score/quantity/nOfTrack sboxMesh_1
+/score/close
+
+/score/create/boxMesh boxMesh_2
+/score/mesh/boxSize 1.5 1.5 1.5 um
+/score/mesh/nBin 1 1 1
+/score/mesh/translate/xyz 0. 3. 3. um
+/score/quantity/nOfTrack sboxMesh_2
+/score/close
+
+/score/create/boxMesh boxMesh_3
+/score/mesh/boxSize 1.5 1.5 1.5 um
+/score/mesh/nBin 1 1 1
+/score/mesh/translate/xyz 0. -3. 0. um
+/score/quantity/nOfTrack sboxMesh_3
+/score/close
+
+/score/create/boxMesh boxMesh_4
+/score/mesh/boxSize 1.5 1.5 1.5 um
+/score/mesh/nBin 1 1 1
+/score/mesh/translate/xyz 0. 0. 0. um
+/score/quantity/nOfTrack sboxMesh_4
+/score/close
+
+/score/create/boxMesh boxMesh_5
+/score/mesh/boxSize 1.5 1.5 1.5 um
+/score/mesh/nBin 1 1 1
+/score/mesh/translate/xyz 0. 3. 0. um
+/score/quantity/nOfTrack sboxMesh_5
+/score/close
+
+/score/create/boxMesh boxMesh_6
+/score/mesh/boxSize 1.5 1.5 1.5 um
+/score/mesh/nBin 1 1 1
+/score/mesh/translate/xyz 0. -3. -3. um
+/score/quantity/nOfTrack sboxMesh_6
+/score/close
+
+/score/create/boxMesh boxMesh_7
+/score/mesh/boxSize 1.5 1.5 1.5 um
+/score/mesh/nBin 1 1 1
+/score/mesh/translate/xyz 0. 0. -3. um
+/score/quantity/nOfTrack sboxMesh_7
+/score/close
+
+/score/create/boxMesh boxMesh_8
+/score/mesh/boxSize 1.5 1.5 1.5 um
+/score/mesh/nBin 1 1 1
+/score/mesh/translate/xyz 0. 3. -3. um
+/score/quantity/nOfTrack sboxMesh_8
+/score/close
+
+
+
+
+
+
+
+
+
+
+
+

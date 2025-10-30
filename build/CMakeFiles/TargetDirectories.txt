@@ -1,0 +1,7 @@
+/mnt/c/Users/Andrea/Desktop/simulazioni/Grid/build/CMakeFiles/microelectronics.dir
+/mnt/c/Users/Andrea/Desktop/simulazioni/Grid/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Andrea/Desktop/simulazioni/Grid/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Andrea/Desktop/simulazioni/Grid/build/CMakeFiles/list_install_components.dir
+/mnt/c/Users/Andrea/Desktop/simulazioni/Grid/build/CMakeFiles/install.dir
+/mnt/c/Users/Andrea/Desktop/simulazioni/Grid/build/CMakeFiles/install/local.dir
+/mnt/c/Users/Andrea/Desktop/simulazioni/Grid/build/CMakeFiles/install/strip.dir

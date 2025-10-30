@@ -1,0 +1,4 @@
+# mesh name: boxMesh_0
+# primitive scorer name: sboxMesh_0
+# iX, iY, iZ, total(value) , total(val^2), entry
+0,0,0,103,211,51
